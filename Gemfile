@@ -16,6 +16,7 @@ gem 'coffee-rails', '~> 4.1.0'
 
 gem 'pg'
 
+gem 'bootstrap', '~> 4.3.1'
 
 gem "slim-rails" , '~> 3.0'
 
