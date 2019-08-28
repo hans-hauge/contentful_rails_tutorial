@@ -7,13 +7,31 @@ head
   = csrf_meta_tags
   meta name="viewport" content="width=device-width, initial-scale=1"
 body
-  ul.list-group.list-group-horizontal
-    li.list-group-item
-      a.active href="/"
-        = " Home"
-    li.list-group-item
-      a href="#"
-        = " Somewhere else"
+  nav.navbar.navbar-default.navbar-static-top.navbar-inverse
+    .container
+      ul.nav.navbar-nav
+        li.active
+          a href="/"
+           span.glyphicon.glyphicon-home
+           = " Rails Product Demo"
+        li
+          a href="https://app.contentful.com"
+            span.glyphicon.glyphicon-cog
+            = " Contentful Dashboard"
+        li.dropdown
+          a.dropdown-toggle href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
+            span.glyphicon.glyphicon-info-sign
+            = " Developer Center "
+            span.caret
+          ul.dropdown-menu role="menu"
+            li
+              a href="https://www.contentful.com/developers/docs/"
+                = " API Reference"
+      ul.nav.navbar-nav.navbar-right
+        li.navbar-right
+          a*{href: contentful_users_path}
+            span.glyphicon.glyphicon-cog
+            = " Edit Demo Configuration"
 
   == yield
 
